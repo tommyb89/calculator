@@ -1,15 +1,11 @@
 // 1. Select all the buttons
-const numBtns = document.querySelectorAll("[data-number]");
-const operationBtn = document.querySelectorAll("[data-operation]");
-const equalsBtn = document.querySelector("[data-equals]");
-const deleteBtn = document.querySelector("[data-delete]");
-const acBtn = document.querySelector("[data-all-clear]");
-const currentOperandTextElement = document.querySelector(
-  "[data-current-operand ]"
-);
-const prevOperandTextElement = document.querySelector(
-  "[data-previous-operand ]"
-);
+const numBtns = document.querySelectorAll(".calc__button-num");
+const operationBtn = document.querySelectorAll(".calc__button-op");
+const equalsBtn = document.querySelector(".equals");
+const deleteBtn = document.querySelector(".del");
+const acBtn = document.querySelector(".ac");
+const currentOperandTextElement = document.querySelector(".result");
+const prev = document.querySelector(".prev-op");
 
 let prevOp = "",
   inputLog = "",

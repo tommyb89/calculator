@@ -7,7 +7,11 @@
 }
 
 body {
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, #041d6d 2.1%, #21a0d3 94.2%);
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    #041d6d 2.1%,
+    #21a0d3 94.2%
+  );
   height: 100vh;
 }
 
@@ -19,7 +23,7 @@ body {
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
-.calc__output {
+.calc__screen {
   grid-column: 1/-1;
   background: rgba(0, 0, 0, 0.75);
   color: white;
@@ -31,11 +35,11 @@ body {
   word-wrap: break-word;
   word-break: break-all;
 }
-.calc__output .previous-operand {
+.calc__screen .previous-operand {
   color: rgba(255, 255, 255, 0.75);
   font-size: 16px;
 }
-.calc__output .current-operand {
+.calc__screen .current-operand {
   font-size: 28px;
 }
 .calc button {

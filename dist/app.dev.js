@@ -1,13 +1,13 @@
 "use strict";
 
 // 1. Select all the buttons
-var numBtns = document.querySelectorAll("[data-number]");
-var operationBtn = document.querySelectorAll("[data-operation]");
-var equalsBtn = document.querySelector("[data-equals]");
-var deleteBtn = document.querySelector("[data-delete]");
-var acBtn = document.querySelector("[data-all-clear]");
-var currentOperandTextElement = document.querySelector("[data-current-operand ]");
-var prevOperandTextElement = document.querySelector("[data-previous-operand ]");
+var numBtns = document.querySelectorAll(".calc__button-num");
+var operationBtn = document.querySelectorAll(".calc__button-op");
+var equalsBtn = document.querySelector(".equals");
+var deleteBtn = document.querySelector(".del");
+var acBtn = document.querySelector(".ac");
+var currentOperandTextElement = document.querySelector(".result");
+var prev = document.querySelector(".prev-op");
 var prevOp = "",
     inputLog = "",
     input = "",
