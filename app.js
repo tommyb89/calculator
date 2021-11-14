@@ -1,6 +1,6 @@
 // 1. Select all the buttons
-const numBtns = document.querySelectorAll(".num");
-const opBtn = document.querySelectorAll(".operator");
+const numbers = document.querySelectorAll(".num");
+const operator = document.querySelectorAll(".operator");
 const equalsBtn = document.querySelector(".equal");
 const deleteBtn = document.querySelector(".delete");
 const clear = document.querySelector(".clear");
@@ -44,4 +44,22 @@ function getFormattedNumber(num) {
 
 // printOutput(2222); // 2,222 - this trick worked
 
-// Clearing the output
+function reverseNumFormat(num) {
+  return +num.replace(/,/g, "");
+}
+
+// alert(reverseNumFormat(getOutput(12312312))); // no comas
+
+// Addint event listeners to all operators
+operator.forEach((op) => {
+  op.addEventListener("click", () => {
+    // alert("Operator clicked");
+  });
+});
+
+// Adding event listeners to all numbers
+numbers.forEach((n) => {
+  n.addEventListener("click", () => {
+    alert("Number clicked");
+  });
+});
