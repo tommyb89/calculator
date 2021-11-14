@@ -26,7 +26,22 @@ function getOutput() {
 }
 
 function printOutput(num) {
-  return (result.innerText = num);
+  if (num == "") {
+    result.innerText = num;
+  } else {
+    return (result.innerText = getFormattedNumber(num));
+  }
 }
 
-// console.log(printOutput(44));
+// How to add comas??
+// found reference to toLocaleString()
+
+function getFormattedNumber(num) {
+  let n = Number(num);
+  let value = n.toLocaleString("en");
+  return value;
+}
+
+// printOutput(2222); // 2,222 - this trick worked
+
+// Clearing the output
