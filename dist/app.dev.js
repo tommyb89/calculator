@@ -1,4 +1,4 @@
-"use strict"; // 1. Select all the buttons
+"use strict"; //  Select all the buttons
 
 var numbers = document.querySelectorAll(".num");
 var operator = document.querySelectorAll(".operator");
@@ -71,8 +71,7 @@ operator.forEach(function (op) {
 
 
       if (_output == "" && _history != "") {
-        alert("empty");
-
+        // alert("empty");
         if (isNaN(_history[_history.length - 1])) {
           _history = _history.substr(0, _history.length - 1);
         }
@@ -87,8 +86,8 @@ operator.forEach(function (op) {
 
         if (op.classList.contains("equal")) {
           var finalResult = eval(_history);
-          printOutput(finalResult);
-          console.log(finalResult);
+          printOutput(finalResult); // console.log(finalResult); debugging
+
           printHistory("");
         } else {
           _history = _history + op.innerHTML;
