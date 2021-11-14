@@ -51,10 +51,17 @@ function reverseNumFormat(num) {
 operator.forEach(function (op) {
   op.addEventListener("click", function () {// alert("Operator clicked");
   });
-}); // Adding event listeners to all numbers
+}); // Adding event listeners to all numbers & printing them in the output
 
 numbers.forEach(function (n) {
   n.addEventListener("click", function () {
-    alert("Number clicked");
+    // alert("Number clicked");
+    var output = reverseNumFormat(getOutput());
+
+    if (output !== NaN) {
+      // just checking if the output is a number
+      output += n.innerText;
+      printOutput(output);
+    }
   });
 });

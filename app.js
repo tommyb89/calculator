@@ -57,9 +57,16 @@ operator.forEach((op) => {
   });
 });
 
-// Adding event listeners to all numbers
+// Adding event listeners to all numbers & printing them in the output
 numbers.forEach((n) => {
   n.addEventListener("click", () => {
-    alert("Number clicked");
+    // alert("Number clicked");
+
+    let output = reverseNumFormat(getOutput());
+    if (output !== NaN) {
+      // just checking if the output is a number
+      output += n.innerText;
+      printOutput(output);
+    }
   });
 });
