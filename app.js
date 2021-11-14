@@ -13,7 +13,7 @@ function getHistory() {
 
 // Show value in history
 function printHistory(num) {
-  return (history.innerText = num);
+  history.innerText = num;
 }
 
 // printHistory("92229");
@@ -70,18 +70,25 @@ operator.forEach((op) => {
     } else {
       let output = getOutput();
       let history = getHistory();
+      // console.log(output);
+      // console.log(history);
       if (output == "" && history != "") {
+        alert("empty");
         if (isNaN(history[history.length - 1])) {
           history = history.substr(0, history.length - 1);
         }
       }
 
       if (output != "" || history != "") {
+        // alert("not empty");
         output = output == "" ? output : reverseNumFormat(output);
+        console.log(output);
         history = history + output;
-        if (this.id == "=") {
-          let result = eval(history);
-          printOutput(result);
+        console.log(history);
+        if (op.classList.contains("equal")) {
+          let finalResult = eval(history);
+          printOutput(finalResult);
+          console.log(finalResult);
           printHistory("");
         } else {
           history = history + op.innerHTML;
@@ -101,7 +108,7 @@ numbers.forEach((n) => {
     let output = reverseNumFormat(getOutput());
     if (output != NaN) {
       // just checking if the output is a number
-      output += n.innerText;
+      output = output + n.innerText;
       printOutput(output);
     }
   });

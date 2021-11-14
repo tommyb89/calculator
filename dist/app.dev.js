@@ -1,7 +1,5 @@
 "use strict"; // 1. Select all the buttons
 
-var _this = void 0;
-
 var numbers = document.querySelectorAll(".num");
 var operator = document.querySelectorAll(".operator");
 var result = document.querySelector(".result__output");
@@ -14,7 +12,7 @@ function getHistory() {
 
 
 function printHistory(num) {
-  return history.innerText = num;
+  history.innerText = num;
 } // printHistory("92229");
 // Another function to get and print reults
 
@@ -68,22 +66,29 @@ operator.forEach(function (op) {
     } else {
       var _output = getOutput();
 
-      var _history = getHistory();
+      var _history = getHistory(); // console.log(output);
+      // console.log(history);
+
 
       if (_output == "" && _history != "") {
+        alert("empty");
+
         if (isNaN(_history[_history.length - 1])) {
           _history = _history.substr(0, _history.length - 1);
         }
       }
 
       if (_output != "" || _history != "") {
+        // alert("not empty");
         _output = _output == "" ? _output : reverseNumFormat(_output);
+        console.log(_output);
         _history = _history + _output;
+        console.log(_history);
 
-        if (_this.id == "=") {
-          var _result = eval(_history);
-
-          printOutput(_result);
+        if (op.classList.contains("equal")) {
+          var finalResult = eval(_history);
+          printOutput(finalResult);
+          console.log(finalResult);
           printHistory("");
         } else {
           _history = _history + op.innerHTML;
@@ -102,7 +107,7 @@ numbers.forEach(function (n) {
 
     if (output != NaN) {
       // just checking if the output is a number
-      output += n.innerText;
+      output = output + n.innerText;
       printOutput(output);
     }
   });
