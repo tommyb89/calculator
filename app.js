@@ -1,36 +1,15 @@
 // 1. Select all the buttons
-const numBtns = document.querySelectorAll(".calc__button-num");
-const operationBtn = document.querySelectorAll(".calc__button-op");
-const equalsBtn = document.querySelector(".equals");
-const deleteBtn = document.querySelector(".del");
-const acBtn = document.querySelector(".ac");
-const currentOperandTextElement = document.querySelector(".result");
-const prev = document.querySelector(".prev-op");
+const numBtns = document.querySelectorAll(".num");
+const opBtn = document.querySelectorAll(".operator");
+const equalsBtn = document.querySelector(".equal");
+const deleteBtn = document.querySelector(".delete");
+const clear = document.querySelector(".clear");
+const result = document.querySelector(".result__output");
+const history = document.querySelector(".result__history");
 
-let prevOp = "",
-  inputLog = "",
-  input = "",
-  displayInput = "",
-  operation = "";
+// Function for history and output
+function getHistory() {
+  return history.innerText;
+}
 
-numBtns.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    let clickedBtn = event.target.innerText;
-
-    let numberArr = [];
-    numberArr.push(clickedBtn);
-    // console.log(numberArr);
-  });
-});
-
-// Get operation
-
-const operator = () => {
-  operationsBtn.forEach();
-};
-// Function that calculates numbers
-
-// function calculate(event) {
-//   console.log(event.target.value);
-// }
-// calculate();
+// alert(getHistory());
