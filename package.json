@@ -1,0 +1,22 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "calculator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommyb89/calculator.git"
+  },
+  "author": "tomzy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommyb89/calculator/issues"
+  },
+  "homepage": "https://github.com/tommyb89/calculator#readme",
+  "devDependencies": {
+    "cypress": "^9.0.0"
+  }
+}
