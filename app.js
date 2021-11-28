@@ -9,7 +9,6 @@ const history = document.querySelector(".result__history");
 function getHistory() {
   return history.innerText;
 }
-// alert(getHistory());
 
 // Show value in history
 function printHistory(num) {
@@ -70,8 +69,6 @@ operator.forEach((op) => {
     } else {
       let output = getOutput();
       let history = getHistory();
-      // console.log(output);
-      // console.log(history);
       if (output == "" && history != "") {
         // alert("empty");
         if (isNaN(history[history.length - 1])) {
@@ -88,7 +85,6 @@ operator.forEach((op) => {
         if (op.classList.contains("equal")) {
           let finalResult = eval(history);
           printOutput(finalResult);
-          // console.log(finalResult); debugging
           printHistory("");
         } else {
           history = history + op.innerHTML;

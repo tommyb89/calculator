@@ -1,0 +1,30 @@
+@import "base";
+.btn {
+  cursor: pointer;
+  font-size: 22px;
+  border: 1px solid white;
+  outline: none;
+  background-color: $num;
+
+  &:hover {
+    background: $hover;
+  }
+  &.operator {
+    background-color: $operator;
+    &:hover {
+      background: $hover;
+    }
+  }
+  &.clear {
+    background-color: $clear;
+    &:hover {
+      background: $hover;
+    }
+  }
+  &.equal {
+    background-color: $equal;
+    &:hover {
+      background: $hover;
+    }
+  }
+}

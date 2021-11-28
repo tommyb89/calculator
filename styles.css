@@ -7,7 +7,8 @@
 }
 
 body {
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, #041d6d 2.1%, #21a0d3 94.2%);
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
   height: 100vh;
 }
 
@@ -16,13 +17,13 @@ body {
   justify-content: center;
   align-content: center;
   min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
 }
 
 .result {
   grid-column: 1/-1;
-  background: rgba(55, 105, 97, 0.75);
+  background: #009dae;
   color: white;
   display: flex;
   align-items: flex-end;
@@ -41,32 +42,42 @@ body {
   font-size: 40px;
 }
 
+.span2 {
+  grid-column: span 2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
 .btn {
   cursor: pointer;
   font-size: 22px;
   border: 1px solid white;
   outline: none;
-  background: rgba(114, 101, 185, 0.75);
+  background-color: #c2fff9;
 }
 .btn:hover {
-  background: rgba(148, 143, 143, 0.9);
+  background: blue;
 }
 .btn.operator {
-  background-color: rgba(47, 207, 55, 0.616);
+  background-color: #71dfe7;
 }
 .btn.operator:hover {
-  background: rgba(148, 143, 143, 0.9);
+  background: blue;
 }
 .btn.clear {
-  background-color: rgba(185, 0, 0, 0.623);
+  background-color: #ffe652;
 }
 .btn.clear:hover {
-  background: rgba(148, 143, 143, 0.9);
+  background: blue;
 }
 .btn.equal {
-  background-color: #c2c22d;
+  background-color: #ff8989;
 }
-
-.span2 {
-  grid-column: span 2;
+.btn.equal:hover {
+  background: blue;
 }

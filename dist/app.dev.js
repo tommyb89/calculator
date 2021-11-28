@@ -7,8 +7,7 @@ var history = document.querySelector(".result__history"); // Function to get his
 
 function getHistory() {
   return history.innerText;
-} // alert(getHistory());
-// Show value in history
+} // Show value in history
 
 
 function printHistory(num) {
@@ -66,9 +65,7 @@ operator.forEach(function (op) {
     } else {
       var _output = getOutput();
 
-      var _history = getHistory(); // console.log(output);
-      // console.log(history);
-
+      var _history = getHistory();
 
       if (_output == "" && _history != "") {
         // alert("empty");
@@ -86,8 +83,7 @@ operator.forEach(function (op) {
 
         if (op.classList.contains("equal")) {
           var finalResult = eval(_history);
-          printOutput(finalResult); // console.log(finalResult); debugging
-
+          printOutput(finalResult);
           printHistory("");
         } else {
           _history = _history + op.innerHTML;
