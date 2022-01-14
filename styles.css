@@ -61,23 +61,23 @@ body {
   background-color: #c2fff9;
 }
 .btn:hover {
-  background: blue;
+  background: whitesmoke;
 }
 .btn.operator {
   background-color: #71dfe7;
 }
 .btn.operator:hover {
-  background: blue;
+  background: whitesmoke;
 }
 .btn.clear {
   background-color: #ffe652;
 }
 .btn.clear:hover {
-  background: blue;
+  background: whitesmoke;
 }
 .btn.equal {
   background-color: #ff8989;
 }
 .btn.equal:hover {
-  background: blue;
+  background: whitesmoke;
 }
